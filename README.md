@@ -24,10 +24,10 @@ automated to run daily.
 
 ## 🎯 Objectives
 
--   Detect potentially fraudulent or risky transactions\
--   Apply configurable monitoring rules\
--   Generate weighted risk scores\
--   Automatically produce daily monitoring reports\
+-   Detect potentially fraudulent or risky transactions
+-   Apply configurable monitoring rules
+-   Generate weighted risk scores
+-   Automatically produce daily monitoring reports
 -   Provide dashboard-based visualization for stakeholders
 
 ------------------------------------------------------------------------
@@ -36,11 +36,11 @@ automated to run daily.
 
 The system runs on a fully automated daily schedule:
 
-1.  Windows Task Scheduler triggers a batch script\
-2.  The batch script executes the transaction monitoring pipeline\
+1.  Windows Task Scheduler triggers a batch script
+2.  The batch script executes the transaction monitoring pipeline
 3.  Outputs are saved to a synchronized OneDrive
-    folder\
-4.  Power BI detects the updated dataset through Power Automate trigger\ 
+    folder
+4.  Power BI detects the updated dataset through Power Automate trigger 
 5.  Power BI automatically refreshes the dashboard
 
 This ensures continuous monitoring without manual intervention.
@@ -49,7 +49,7 @@ This ensures continuous monitoring without manual intervention.
 
 ## 🏗️ System Architecture
 
-    Data Source (Transactions)
+    Data Source (Transactions, Users, Loans, Rules)
             ↓
     Data Cleaning & Transformation
             ↓
@@ -68,10 +68,10 @@ This ensures continuous monitoring without manual intervention.
 ## 🔍 Monitoring Rules (Examples)
 
 1.  **Large Transaction Rule** -- Flags transactions above a defined
-    threshold\
+    threshold
 2.  **High Frequency Rule** -- Flags multiple transactions within a
-    short time window\
-3.  **Velocity Rule** -- Flags rapid inflow and outflow movement\
+    short time window
+3.  **Velocity Rule** -- Flags rapid inflow and outflow movement
 4.  **Dormant Account Reactivation Rule** -- Flags large transactions
     after prolonged inactivity
 
@@ -89,10 +89,10 @@ Risk Score = Σ (Triggered Rule × Weight)
 
 ## 📊 Dashboard & Reporting
 
--   Interactive dashboard built in Power BI\
--   Daily automated refresh\
--   Risk distribution analysis\
--   High-risk transaction drill-down\
+-   Interactive dashboard built in Power BI
+-   Daily automated refresh
+-   Risk distribution analysis
+-   High-risk transaction drill-down
 -   Trend monitoring over time
 
 ------------------------------------------------------------------------
@@ -100,7 +100,7 @@ Risk Score = Σ (Triggered Rule × Weight)
 * Python Frameworks and Libraries: Pandas, NumPy
 * SQL (for data extraction)
 * Batch Script for automating
-* Power BI / Excel for reporting and risk visualization
+* Power BI / Excel for reporting/visualization
 * Windows Scheduler for scheduling
 * Power Automating Power BI refresh
 * Version Control: Git
@@ -126,7 +126,7 @@ Risk Score = Σ (Triggered Rule × Weight)
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/rojuadeyemi/diabetes-test-app.git
+    git clone https://github.com/rojuadeyemi/transaction-monitoring.git
     cd diabetes-test-app
     ```
 
@@ -166,23 +166,16 @@ python utility/main.py
 
 To run automatically:
 
--   Configure Windows Task Scheduler\
--   Point it to `/run_script.bat`\
+-   Configure Windows Task Scheduler
+-   Point it to `/run_script.bat`
 -   Schedule daily execution
-------------------------------------------------------------------------
-
-## 🔐 Compliance Considerations
-
-This solution aligns with risk-based transaction monitoring principles
-and can support AML and internal fraud detection frameworks.
-
 ------------------------------------------------------------------------
 
 ## 🔄 Future Enhancements
 
--   Expand rule coverage\
--   Add alert notification system\
--   Integrate case management workflow\
+-   Expand rule coverage
+-   Add alert notification system
+-   Integrate case management workflow
 -   Extend to near real-time monitoring
 
 ------------------------------------------------------------------------
