@@ -1,0 +1,22 @@
+# Environment variables
+.venv
+
+
+# Python
+__pycache__/
+.installed.cfg
+*.log
+*.pyc
+
+# folders
+processed_data/
+report/
+Others/
+
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+#Database 
+*.db
+
