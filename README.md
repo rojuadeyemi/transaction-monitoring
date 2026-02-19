@@ -127,7 +127,7 @@ Risk Score = Σ (Triggered Rule × Weight)
 
     ```sh
     git clone https://github.com/rojuadeyemi/transaction-monitoring.git
-    cd diabetes-test-app
+    cd transaction-monitoring
     ```
 
 2. **Create a Virtual Environment**
